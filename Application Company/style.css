@@ -5,7 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+@keyframes fade-right {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-top {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +77,11 @@ body {
   font-size: clamp(3rem, 3.8vw, 5rem);
   font-family: "Roboto";
   font-weight: 400;
+  transform: translateX(-30%);
+  opacity: 0;
+  animation: fade-right .5s .4s linear forwards;
 }
+
 
 .landing-page-title {
   width: 40%;
@@ -70,6 +92,12 @@ body {
   margin: 1rem 0 1.3rem;
   font-weight: 400;
   line-height: 1.78;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fade-top .5s .85s linear forwards;
+}
+.landing-page-title > div {
+  margin: 2rem;
 }
 
 .download-btn {
@@ -81,6 +109,7 @@ body {
   padding: 0.8rem 1.2rem;
   border-radius: 25px;
   cursor: pointer;
+  margin: .8rem 0;
 }
 .watch-video-btn {
   border: 0;
@@ -88,7 +117,7 @@ body {
   color: #fff;
   font-size: 1rem;
   font-family: "Roboto";
-  margin-left: 2rem;
+  margin: .8rem 0 .5rem 2rem;
   cursor: pointer;
 }
 .watch-video-btn i {
@@ -318,7 +347,7 @@ body {
   margin-top: .8rem;
 }
 .question-image {
-  width: clamp(250px, 19vw, 400px);
+  width: clamp(200px, 19vw, 400px);
 }
 
 .user-sample-question {
@@ -330,4 +359,64 @@ body {
   font-weight: 400;
   margin-bottom: .7rem;
   font-size: 1.3rem;
+}
+
+.statistic {
+  background-color: var(--active-color);
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  width: 85vw;
+  gap: 1rem;
+  color: #fff;
+  padding: 4rem 2.8rem ;
+  font-family: 'Poppins';
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.statistic-item {
+  text-align: center;
+}
+.statistic-item > p {
+  font-size: 2.32rem;
+  font-family: 'Roboto';
+}
+.contact-us {
+  margin: 4.5rem auto;
+  min-width: 300px;
+  width: 40%;
+  text-align: center;
+}
+.contact-us h2 {
+  font-size: 3rem;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.contact-us p {
+  margin: 1rem 0;
+  color: #666;
+  font-size: "poppins";
+}
+footer {
+  background-color: #000;
+  font-size: .8rem;
+}
+.footer-child {
+  width: 85vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+footer .link-list ul li {
+display: inline-block;
+margin: .15rem;
+
+}
+footer a {
+  text-decoration: none;
+  color: #fff;
 }

@@ -33,11 +33,24 @@
     .our-app-content {
         width: 78%;
     }
+    .question {
+        flex-flow: row wrap-reverse;
+    }
+    .question-content {
+        width: 100%;
+    }
    
 }
 @media screen and (max-width: 480px) {
     html {
         font-size: 13px;
+    }
+    .statistic-item {
+        flex-basis: 40%;
+    }
+    .footer-child {
+        flex-direction: column;
+        row-gap: .8rem;
     }
 }
 
